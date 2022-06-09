@@ -1,0 +1,49 @@
+
+<h2>Veiculo</h2>
+
+
+<form (ngSubmit)="submit()" class="row g-3">
+
+    <div class="col-md-1">
+      <label for="inputId" class="form-label">ID</label>
+      <input type="number" class="form-control" id="inputId" name="id" [(ngModel)]="model.id">
+    </div>
+
+    <div class="col-md-4">
+      <label for="inputModelo" class="form-label">Modelo</label>
+      <input type="text" class="form-control" id="inputModelo" name="modelo" [(ngModel)]="model.modelo">
+    </div>
+
+
+    <div class="col-md-2">
+      <label for="inputMarca" class="form-label">Marca</label>
+      <input type="text" class="form-control" id="inputMarca" name="marca" [(ngModel)]="model.marca">
+    </div>
+
+
+    <div class="col-md-2">
+      <label for="inputCor" class="form-label">Cor</label>
+      <input type="email" class="form-control" id="inputCor" name="cor" [(ngModel)]="model.cor">
+    </div>
+
+
+      <div class="col-md-2">
+        <label for="inputAno" class="form-label">Ano</label>
+        <input type="text" class="form-control" id="inputAno" name="ano" [(ngModel)]="model.ano">
+      </div>
+	  
+	
+    
+
+    <div class="col-12">  
+
+      <button class="btn btn-primary" (click)="voltarParaLista()">Voltar </button>
+
+      <button type="submit" class="btn btn-success">Salvar</button>
+    </div>
+
+
+  </form>
+
+
+

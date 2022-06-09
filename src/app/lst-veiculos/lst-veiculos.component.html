@@ -1,0 +1,41 @@
+<h4>Veiculos</h4>
+<br>
+
+<button class="btn btn-success" (click)="cadastrarVeiculo()">Novo Veiculo</button>
+
+<br>
+<br>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">ID</th>
+      <th scope="col">Modelo</th>
+      <th scope="col">Marca</th>
+      <th scope="col">Cor</th>
+      <th scope="col">Ano</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let veiculo of veiculos">
+      <td>
+        <div class="btn-group btn-sm" role="group" (click)="removerVeiculo(veiculo.id)" aria-label="Basic example">
+          <button type="button" class="btn btn-danger">Remover</button>
+          <a [routerLink]="['/veiculo', veiculo.id]" class="btn  btn-primary" role="button"
+            aria-disabled="true">Alterar</a>
+
+        </div>
+      </td>
+
+      <td scope="row">{{veiculo.id}}</td>
+      <td scope="row">{{veiculo.modelo}}</td>
+      <td scope="row">{{veiculo.marca}}</td>
+      <td scope="row">{{veiculo.cor}}</td>
+      <td scope="row">{{veiculo.ano}}</td>
+
+    </tr>
+
+  </tbody>
+</table>
