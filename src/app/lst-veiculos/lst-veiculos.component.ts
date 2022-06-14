@@ -18,7 +18,9 @@ export class LstVeiculosComponent implements OnInit {
     this.obterTodos();
   }
 
-
+  inicio () {
+    this.route.navigate([""])
+  }
 
   obterTodos() {
     this.veiculoService.ObterTodos().subscribe({

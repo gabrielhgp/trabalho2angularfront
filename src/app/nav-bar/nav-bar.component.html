@@ -2,8 +2,9 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
 
-      <img src="https://logodownload.org/wp-content/uploads/2019/08/localiza-hertz-logo.png" width="120px" height="45px" alt="logo_reges">
-
+      <img  style="margin-right: 15px;" src="https://logodownload.org/wp-content/uploads/2019/08/localiza-hertz-logo.png" width="120px" height="45px" alt="logo_reges">
+      
+      <a class="navbar-brand" href="#">Locadora de Veículos Reges</a>
 
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,9 +20,27 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li>
+              <a class="dropdown-item" routerLink="/veiculo" >Veiculos</a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item" routerLink="" >Clientes</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Consultas
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
               <a class="dropdown-item" routerLink="/veiculos" >Veiculos</a>
             </li>
             <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item" routerLink="" >Clientes</a>
+            </li>
           </ul>
         </li>
       </ul>

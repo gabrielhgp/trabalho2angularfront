@@ -1,10 +1,14 @@
 <h4>Veiculos</h4>
 <br>
 
-<button class="btn btn-success" (click)="cadastrarVeiculo()">Novo Veiculo</button>
+<div class="col-12">  
+  <button style="margin-right: 15px;" class="btn btn-secondary" (click)="inicio()">Voltar </button>
 
-<br>
-<br>
+</div>
+
+
+
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -21,8 +25,9 @@
   <tbody>
     <tr *ngFor="let veiculo of veiculos">
       <td>
-        <div class="btn-group btn-sm" role="group" (click)="removerVeiculo(veiculo.id)" aria-label="Basic example">
-          <button type="button" class="btn btn-danger">Remover</button>
+        <div  class="btn-group btn-sm" role="group" (click)="removerVeiculo(veiculo.id)" aria-label="Basic example">
+          <button style="margin-right: 15px;" type="button" class="btn btn-danger">Remover</button>
+          
           <a [routerLink]="['/veiculo', veiculo.id]" class="btn  btn-primary" role="button"
             aria-disabled="true">Alterar</a>
 
@@ -39,3 +44,6 @@
 
   </tbody>
 </table>
+
+
+

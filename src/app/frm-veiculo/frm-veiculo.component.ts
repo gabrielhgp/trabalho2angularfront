@@ -21,6 +21,10 @@ export class FrmVeiculoComponent implements OnInit {
  
   id!: number;
 
+inicio () {
+  this.router.navigate([""])
+}
+
   voltarParaLista() {
     this.router.navigate(['/veiculos']);
   }
@@ -41,7 +45,7 @@ export class FrmVeiculoComponent implements OnInit {
       this.veiculoService.Editar(this.id,this.model).subscribe({
         error: (e) => { console.log(e) },
         next: (dados) => {
-          alert('Veiculo alterado com sucesso!!!!!');
+          alert('Veiculo foi alterado com sucesso.');
           this.voltarParaLista();
          },
         });
@@ -50,7 +54,7 @@ export class FrmVeiculoComponent implements OnInit {
       this.veiculoService.Adicionar(this.model).subscribe({
         error: (e) => { console.log(e) },
         next: (dados) => {
-          alert('Veiculo cadastrado com sucesso!!!!!');
+          alert('Veiculo foi cadastrado com sucesso.');
           this.voltarParaLista();
          },
         });
